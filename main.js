@@ -6,8 +6,8 @@ const LinksSocialMedia = {
   twitter: 'Dougls99'
 }
 
-function changeSocialMediaLinks(){
-  for(let li of socialLinks.children){
+function changeSocialMediaLinks() {
+  for (let li of socialLinks.children) {
     const social = li.getAttribute('class')
 
     li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
@@ -15,3 +15,11 @@ function changeSocialMediaLinks(){
 }
 
 changeSocialMediaLinks()
+
+function getGitHubProfileInfos() {
+  const url = `https://api.github.com/users/${LinksSocialMedia.github}`
+
+  alert(url)
+}
+
+getGitHubProfileInfos()
